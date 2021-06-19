@@ -49,8 +49,7 @@
 <section class= "corona_update mt-7 container-fluid ">
      <h3 class= "text-uppercase text-center">India Statewise Breakdown - Latest Updates</h3> 
 
-    <div class = "table_responsive">
-    
+    <div class = "table_responsive">    
          <table  class = " table table-bordered  table-striped text-center" >
              <tr >                 
                  <th style="font-weight: bold;" class = "text-capitalize">state - statecode</th>      
@@ -58,28 +57,16 @@
                  <th style="font-weight: bold;" class = "text-capitalize">active</th>
                  <th style="font-weight: bold;" class = "text-capitalize">recovered</th>
                  <th style="font-weight: bold;" class = "text-capitalize">deaths</th>
-                 <th style="font-weight: bold;" class = "text-capitalize">last updated time</th>
-                 
+                 <th style="font-weight: bold;" class = "text-capitalize">last updated time</th>                 
              </tr>
-
-
 <?php
 $data = file_get_contents('https://api.covid19india.org/data.json');
 $coronalive = json_decode($data, true);
- 
-//echo "<pre>";
-
-//print_r($coronalive);
-
-//echo "</pre>";
-
 $statescount = count($coronalive['statewise']);
-
 $i=1;
 while($i < $statescount) {
 ?>
-<tr>
- 
+<tr> 
   <td><?php echo $coronalive['statewise'][$i]['state'] , ' - ', $coronalive['statewise'][$i]['statecode'] ?></td>
   <td><?php echo $coronalive['statewise'][$i]['confirmed']  ?></td>
   <td><?php echo $coronalive['statewise'][$i]['active']  ?></td>
@@ -87,27 +74,12 @@ while($i < $statescount) {
   <td><?php echo $coronalive['statewise'][$i]['deaths']  ?></td>
   <td><?php echo $coronalive['statewise'][$i]['lastupdatedtime']  ?></td>
 </tr>
- <!-- echo $coronalive['statewise'][$i]['lastupdatedtime'] . "<br>" ;
-  echo $coronalive['statewise'][$i]['state'] . "<br>" ;
-  echo $coronalive['statewise'][$i]['statecode'] . "<br>" ;
-  echo $coronalive['statewise'][$i]['confirmed'] . "<br>" ;
-  echo $coronalive['statewise'][$i]['active'] . "<br>" ;
-  echo $coronalive['statewise'][$i]['recovered'] . "<br>" ;
-  echo $coronalive['statewise'][$i]['deaths'] . "<br>" ; -->
 <?php
   $i++;
 }
-
-
-
-
-
 ?>
-
         </table>
-    </div>
-
-   
+    </div>   
 </section>
 
 <!-- ////////////     top cursor    ////////////  -->
@@ -122,13 +94,8 @@ while($i < $statescount) {
     </div>
 </footer>
 
-
 <script type = "text/javascript">
-
-
-
 mybutton = document.getElementById("myBtn");
-//when the  usre scroll down 100px from the top of document, show the button
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop>100)
@@ -149,12 +116,7 @@ function topFunction(){
     document.body.scrollTop = 0;//for safari
     document.documentElement.scrollTop = 0; //for chrom,Firefox,IE and Opera
 }
-
-
-
 </script>
-
-
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js" integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

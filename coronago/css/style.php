@@ -438,7 +438,7 @@ body{
         *{
             padding: 0;
             margin: 0;
-           
+            font: 1em sans-serif;
         }
         .mapcontainer{
             position: absolute;

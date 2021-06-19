@@ -42,12 +42,7 @@
          <p class="bg-primary text-white"> This Project made by Shivani Shrivastava</p>
     </div>
 </footer>
-
-
 <script type = "text/javascript">
-
-
-
 mybutton = document.getElementById("myBtn");
 //when the  usre scroll down 100px from the top of document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -66,12 +61,6 @@ function topFunction(){
     document.body.scrollTop = 0;//for safari
     document.documentElement.scrollTop = 0; //for chrom,Firefox,IE and Opera
 }
-function topFunction(){
-    document.body.scrollTop = 0;//for safari
-    document.documentElement.scrollTop = 0; //for chrom,Firefox,IE and Opera
-}
-
 </script>
-
 </body>
 </html>
